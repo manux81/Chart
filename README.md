@@ -11,7 +11,7 @@
 Add this repository to your Swift Package Manager dependencies.
 
 ```swift
-.package(url: "https://github.com/yourusername/Chart.git", .upToNextMajor(from: "1.0.0"))
+.package(url: "https://github.com/manux81/Chart.git", .upToNextMajor(from: "1.0.0"))
 ```
 
 ## Usage
