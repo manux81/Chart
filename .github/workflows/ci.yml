@@ -3,7 +3,7 @@ name: Swift CI
 on:
   push:
     branches:
-      - master
+      - main
       - new-version
   pull_request:
     branches:
