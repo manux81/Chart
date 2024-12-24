@@ -23,6 +23,7 @@
  */
 
 
+
 import UIKit
 
 public protocol ChartDelegate {
@@ -945,4 +946,20 @@ extension Chart: UIGestureRecognizerDelegate {
 	}
 
 }
+
+extension Date {
+	func addMonth(months: Int) -> Date? {
+		return Calendar.current.date(byAdding: .month, value: months, to: self)
+	}
+}
+
+func CGColorFromRGB(rgbValue: Int32) -> CGColor {
+	let red : CGFloat = ((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0
+	let green : CGFloat = ((CGFloat)((rgbValue & 0x00FF00) >> 8)) / 255.0
+	let blue : CGFloat = ((CGFloat)((rgbValue & 0x00FF) >> 0)) / 255.0
+
+	return CGColor(red: red, green: green, blue: blue, alpha: 1.0)
+}
+
+
 
