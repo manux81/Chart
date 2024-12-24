@@ -3,25 +3,21 @@ name: Swift CI
 on:
   push:
     branches:
-      - main
+      - master
+      - new-version
   pull_request:
     branches:
-      - main
-
+      - master
+      - new-version
 jobs:
   build:
+
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Swift
-        uses: fwal/setup-swift@v1
-        with:
-          swift-version: '5.7'
-
-      - name: Build and test for iOS
-        run: |
-          # Build and run tests specifically for iOS
-          swift test --platform iOS
+    - uses: actions/checkout@v2
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
 
