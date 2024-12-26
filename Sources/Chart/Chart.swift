@@ -24,7 +24,9 @@
 
 
 
+#if canImport(UIKit)
 import UIKit
+#endif
 
 public protocol ChartDelegate {
 	func emitSwipe(direction: Bool)
