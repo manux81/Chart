@@ -7,7 +7,7 @@ on:
       - new-version
   pull_request:
     branches:
-      - master
+      - main
       - new-version
 jobs:
   build:
